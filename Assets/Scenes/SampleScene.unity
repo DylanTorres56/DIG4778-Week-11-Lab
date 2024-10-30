@@ -258,6 +258,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 820a209962513a543a035e51ffd1fb7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start: {x: 2, y: 4}
+  goal: {x: 3, y: 6}
+  obstacleProbability: 20
+  obstacleProbChanged: 20
+  obstacleLocation: {x: 3, y: 1}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
