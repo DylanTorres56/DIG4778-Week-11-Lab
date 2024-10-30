@@ -17,6 +17,7 @@ public class Pathfinding : MonoBehaviour
         new Vector2Int(0, -1)
     };
 
+    // This int array creates a grid, with open spaces represented with a value of 0 and obstacles as 1.
     private int[,] grid = new int[,]
     {
         { 0, 1, 0, 0, 0 },
@@ -62,11 +63,13 @@ public class Pathfinding : MonoBehaviour
         Gizmos.DrawCube(new Vector3(goal.x * cellSize, 0, goal.y * cellSize), new Vector3(cellSize, 0.1f, cellSize));
     }
 
+    // This bool checks if a grid space is viable by way of it staying in the bounds of the grid.
     private bool IsInBounds(Vector2Int point)
     {
         return point.x >= 0 && point.x < grid.GetLength(1) && point.y >= 0 && point.y < grid.GetLength(0);
     }
 
+    // This function draws a path from start to finishm, enqueueing spaces where the player already came from so it doesn't backtrack.
     private void FindPath(Vector2Int start, Vector2Int goal)
     {
         Queue<Vector2Int> frontier = new Queue<Vector2Int>();
