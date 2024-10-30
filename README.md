@@ -1,6 +1,7 @@
 # Lab
 # Demo Video
 
+https://github.com/user-attachments/assets/9ee6aef0-646a-4646-bfc2-4d6c0974e408
 
 How does A* pathfinding calculate and prioritize paths?
 A* pathfinding is able to calculate the shortest possible paths using heuristic estimates. It prioritizes the shortest possible path based on the distance from the current position to the next unobstructed position closest to the exit. The shorter estimated distance will be prioritized first.
